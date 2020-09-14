@@ -3,14 +3,14 @@ class AnymotionCli < Formula
 
   desc "Command Line Interface for AnyMotion API"
   homepage "https://github.com/nttpc/anymotion-cli"
-  url "https://files.pythonhosted.org/packages/f1/ed/3777d232cd8100b87f680a506735f8cbf811daad55b6f440a5b173a4ea37/anymotion-cli-1.1.0.tar.gz"
-  sha256 "c6b23592d42746d16e0c5fd85244bbadf81e612581c72382a2d4b3c913aa478a"
+  url "https://files.pythonhosted.org/packages/8d/53/3d2f4e499a83017cd184696f4164260f79c02c8312fa01b1d4713699ba0f/anymotion-cli-1.2.0.tar.gz"
+  sha256 "13cf32b17727df0e414809ee77eabb044260855ea785823ba853f9472f249dc5"
 
   depends_on "python@3.8"
 
   resource "anymotion-sdk" do
-    url "https://files.pythonhosted.org/packages/fe/e9/c344cacafe02d1dba52b5637558bff04bb4376749004750c401fdfb01c36/anymotion-sdk-1.2.1.tar.gz"
-    sha256 "08b5f7994826ee596c79cd72b3f5578a1083c78fd0c098b657e32a9b4bc6a8c8"
+    url "https://files.pythonhosted.org/packages/9e/58/601d3478c08d62d8eaf799026784c83634034fdb793c7d3f37d647e63136/anymotion-sdk-1.2.2.tar.gz"
+    sha256 "ea29beec5947784ad4ac040b6bdb49e5f10035be773350bcf85c32c810f49f74"
   end
 
   resource "certifi" do
@@ -28,16 +28,6 @@ class AnymotionCli < Formula
     sha256 "d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"
   end
 
-  resource "click-help-colors" do
-    url "https://files.pythonhosted.org/packages/cc/3f/6d6f3edb803eb58cd619a19f3af073f9e1b80529c73e8b02b8cc12e0ee3c/click-help-colors-0.8.tar.gz"
-    sha256 "119e5faf69cfc919c995c5962326ac8fd87f11e56a371af594e3dfd8458f4c6e"
-  end
-
-  resource "click-repl" do
-    url "https://files.pythonhosted.org/packages/51/99/6a722e232f92fdc21c46fd042fea63e7c2fcda3086ff5db62edd595d3f49/click-repl-0.1.6.tar.gz"
-    sha256 "b9f29d52abc4d6059f8e276132a111ab8d94980afe6a5432b9d996544afa95d5"
-  end
-
   resource "idna" do
     url "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz"
     sha256 "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
@@ -49,18 +39,13 @@ class AnymotionCli < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/6e/4d/4d2fe93a35dfba417311a4ff627489a947b01dc0cc377a3673c00cf7e4b2/Pygments-2.6.1.tar.gz"
-    sha256 "647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"
+    url "https://files.pythonhosted.org/packages/5d/9d/208733ccc91b1d2c2af7270ffe3def197504bd8da875bc3fa1dc75039795/Pygments-2.7.0.tar.gz"
+    sha256 "2594e8fdb06fef91552f86f4fd3a244d148ab24b66042036e64f29a291515048"
   end
 
   resource "requests" do
     url "https://files.pythonhosted.org/packages/da/67/672b422d9daf07365259958912ba533a0ecab839d4084c487a5fe9a5405f/requests-2.24.0.tar.gz"
     sha256 "b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"
-  end
-
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
-    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   end
 
   resource "tabulate" do
@@ -105,6 +90,6 @@ class AnymotionCli < Formula
   end
 
   test do
-    system "#{bin}/amcli", "--version"
+    assert_match version.to_s, shell_output("#{bin}/amcli --version")
   end
 end
