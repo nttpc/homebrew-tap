@@ -3,19 +3,19 @@ class AnymotionCli < Formula
 
   desc "Command Line Interface for AnyMotion API"
   homepage "https://github.com/nttpc/anymotion-cli"
-  url "https://files.pythonhosted.org/packages/8d/53/3d2f4e499a83017cd184696f4164260f79c02c8312fa01b1d4713699ba0f/anymotion-cli-1.2.0.tar.gz"
-  sha256 "13cf32b17727df0e414809ee77eabb044260855ea785823ba853f9472f249dc5"
+  url "https://files.pythonhosted.org/packages/4a/dd/0e4f3db1eada0e1bf5f44f9010d0ac7217ae8a2bcff3c20027d3d1e24255/anymotion-cli-1.2.1.tar.gz"
+  sha256 "f946d6c412f613c41187bea3fc42c3b41b684f615df776acb07b3a0a86f871f3"
 
-  depends_on "python@3.8"
+  depends_on "python@3.9"
 
   resource "anymotion-sdk" do
-    url "https://files.pythonhosted.org/packages/9e/58/601d3478c08d62d8eaf799026784c83634034fdb793c7d3f37d647e63136/anymotion-sdk-1.2.2.tar.gz"
-    sha256 "ea29beec5947784ad4ac040b6bdb49e5f10035be773350bcf85c32c810f49f74"
+    url "https://files.pythonhosted.org/packages/59/02/a2f14effba157cc5daaa2d67a1abd2d8aa23b11c59bb7373a03bbe9009c6/anymotion-sdk-1.2.4.tar.gz"
+    sha256 "e970f4fc6ac78e926f88f7a614a798ca073ab4f8ca9d628eb4a8f6b6704bc4f8"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/40/a7/ded59fa294b85ca206082306bba75469a38ea1c7d44ea7e1d64f5443d67a/certifi-2020.6.20.tar.gz"
-    sha256 "5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3"
+    url "https://files.pythonhosted.org/packages/e6/de/879cf857ae6f890dfa23c3d6239814c5471936b618c8fb0c8732ad5da885/certifi-2020.11.8.tar.gz"
+    sha256 "f05def092c44fbf25834a51509ef6e631dc19765ab8a57b4e7ab85531f0a9cf4"
   end
 
   resource "chardet" do
@@ -34,18 +34,18 @@ class AnymotionCli < Formula
   end
 
   resource "prompt-toolkit" do
-    url "https://files.pythonhosted.org/packages/18/0f/ae4b350b969dc1d8ecfcbdc1060d59ff025336a23f153ece49aa662a1309/prompt_toolkit-3.0.7.tar.gz"
-    sha256 "822f4605f28f7d2ba6b0b09a31e25e140871e96364d1d377667b547bb3bf4489"
+    url "https://files.pythonhosted.org/packages/d4/12/7fe77b49d67845a378cfadb484b64218ed09d0e8bf420c663b4fe28f0631/prompt_toolkit-3.0.8.tar.gz"
+    sha256 "25c95d2ac813909f813c93fde734b6e44406d1477a9faef7c915ff37d39c0a8c"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/5d/9d/208733ccc91b1d2c2af7270ffe3def197504bd8da875bc3fa1dc75039795/Pygments-2.7.0.tar.gz"
-    sha256 "2594e8fdb06fef91552f86f4fd3a244d148ab24b66042036e64f29a291515048"
+    url "https://files.pythonhosted.org/packages/5d/0e/ff13c055b014d634ed17e9e9345a312c28ec6a06448ba6d6ccfa77c3b5e8/Pygments-2.7.2.tar.gz"
+    sha256 "381985fcc551eb9d37c52088a32914e00517e57f4a21609f48141ba08e193fa0"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/da/67/672b422d9daf07365259958912ba533a0ecab839d4084c487a5fe9a5405f/requests-2.24.0.tar.gz"
-    sha256 "b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"
+    url "https://files.pythonhosted.org/packages/9f/14/4a6542a078773957aa83101336375c9597e6fe5889d20abda9c38f9f3ff2/requests-2.25.0.tar.gz"
+    sha256 "7f1a0b932f4a60a1a65caa4263921bb7d9ee911957e0ae4a23a6dd08185ad5f8"
   end
 
   resource "tabulate" do
@@ -54,8 +54,8 @@ class AnymotionCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/81/f4/87467aeb3afc4a6056e1fe86626d259ab97e1213b1dfec14c7cb5f538bf0/urllib3-1.25.10.tar.gz"
-    sha256 "91056c15fa70756691db97756772bb1eb9678fa585d9184f24534b100dc60f4a"
+    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
+    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
   resource "wcwidth" do
@@ -64,29 +64,13 @@ class AnymotionCli < Formula
   end
 
   resource "yaspin" do
-    url "https://files.pythonhosted.org/packages/ac/af/0b1430abcffa44a5376a13f0e95912f89145facb528ef08c801f71e9bbd0/yaspin-1.0.0.tar.gz"
-    sha256 "97f4a08af09f14890cb7bad584327182716a758728bfd12ad73176e6955661da"
+    url "https://files.pythonhosted.org/packages/f8/6d/7d5d081db3f399f5e345ad5107fa015f84a0c0dd62f1c9deb277ba83774e/yaspin-1.2.0.tar.gz"
+    sha256 "72e9cdbc0e797ef886c373fef2bcd6526a704a470696f9d78d0bb27951fe659a"
   end
 
   def install
-    rm_f "pyproject.toml"
-
-    venv = virtualenv_create(libexec, "python3")
-
-    poetry_resources = %w[anymotion-sdk yaspin]
-    poetry_resources.each do |r|
-      resource(r).stage do
-        rm_f "pyproject.toml"
-        venv.pip_install Pathname.pwd
-      end
-    end
-
-    res = resources.map(&:name).to_set - poetry_resources
-    res.each do |r|
-      venv.pip_install resource(r)
-    end
-
-    venv.pip_install_and_link buildpath
+    virtualenv_create(libexec, "python3.9")
+    virtualenv_install_with_resources
   end
 
   test do
